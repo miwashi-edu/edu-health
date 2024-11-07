@@ -79,3 +79,24 @@ app.use(express.json());
 module.exports = app;
 EOF
 ```
+
+## app.js with health
+
+```bash
+cd ~
+cd ws
+mkdir cd edu-health
+npm install --save @kunalnagarco/healthie
+cat > ./src/app.js << 'EOF'
+const express = require('express');
+const app = express();
+app.use(express.json());
+
+const { handleHealthCheck } = require('@kunalnagarco/healthie');
+app.use(handleHealthCheck());
+
+module.exports = app;
+EOF
+```
+
+
