@@ -7,7 +7,6 @@ cd ~
 cd ws
 rm -rf edu-health #Om den finns
 mkdir edu-health && cd edu-health
-git init
 npm init -y
 mkdir src
 touch ./src/config.js
@@ -17,9 +16,20 @@ npm pkg set scripts.start="node ./src/server.js"
 npm pkg set scripts.dev="node --watch ./src/server.js"
 npm pkg set scripts.test="jest"
 npm install express
+```
+
+## git
+
+```bash
 git init
+cat > .gitignore << 'EOF'
+node_modules
+build
+dist
+EOF
 git add .
 git commit -m "Initial commit"
+
 ```
 
 ## config.js
