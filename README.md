@@ -85,7 +85,7 @@ EOF
 ```bash
 cd ~
 cd ws
-mkdir cd edu-health
+cd edu-health
 npm install --save @kunalnagarco/healthie
 cat > ./src/app.js << 'EOF'
 const express = require('express');
