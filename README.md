@@ -55,7 +55,7 @@ const printConfig = () => {
 async function startServer() {
     try {
         app.listen(PORT, HOST, () => {
-            console.log(`Auth Server Listening on ${HOST}:${PORT}`);
+            console.log(`Auth Server Listening on ${PORT}`);
             printConfig();
         });
     } catch (err) {
